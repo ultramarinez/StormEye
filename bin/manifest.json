@@ -10,6 +10,6 @@
           { "path": "boot_app0.bin", "offset": 57344 },
           { "path": "fin.ino.bin", "offset": 65536 }
         ]
-      }     
+      }    
     ]
   }

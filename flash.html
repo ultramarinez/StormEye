@@ -1,8 +1,62 @@
 <!DOCTYPE html>
-<html>
-<body>
-    <h1>ESP-Web-Tool</h1>
-    <script type="module" src="https://unpkg.com/esp-web-tools@8.0.1/dist/web/install-button.js?module"></script>
-    <esp-web-install-button manifest="bin/manifest.json"></esp-web-install-button>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ESP32 Web Flasher - StormEye</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+                background: linear-gradient(to bottom right, #3d46f1, #acafea);
+                color: #333;
+            }
+            .container {
+                background-color: #fff;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                width: 100%;
+                max-width: 400px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                color: #4e54c8;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: 1rem;
+                color: #555;
+                margin-bottom: 2rem;
+            }
+            esp-web-install-button {
+                --install-button-color: #4e54c8;
+                --install-button-background: #fff;
+                --install-button-border-radius: 5px;
+                --install-button-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>StormEye Web Flasher</h1>
+            <p>Click the button below to flash the firmware to your ESP32 device:</p>
+
+            <!-- Include esp-web-tools -->
+            <script type="module" src="https://unpkg.com/esp-web-tools@8.0.1/dist/web/install-button.js?module"></script>
+
+            <!-- Web install button -->
+            <esp-web-install-button manifest="bin/manifest.json"></esp-web-install-button>
+        </div>
+    </body>
 </html>
